@@ -1,0 +1,101 @@
+interactions:
+- request:
+    body: |
+      {"layout_type":"ordered","title":"Test-Get_a_Dashboard_Report_returns_OK_response-1661283669 with Profile Metrics Query","widgets":[{"definition":{"requests":[{"profile_metrics_query":{"compute":{"aggregation":"sum","facet":"@prof_core_cpu_cores"},"group_by":[{"facet":"service","limit":10,"sort":{"aggregation":"sum","facet":"@prof_core_cpu_cores","order":"desc"}}],"search":{"query":"runtime:jvm"}}}],"type":"timeseries"}}]}
+    form: {}
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+    method: POST
+    url: https://api.datadoghq.com/api/v1/dashboard
+  response:
+    body: '{"notify_list":null,"description":null,"restricted_roles":[],"author_name":null,"template_variables":null,"is_read_only":false,"id":"8mf-upv-5nr","title":"Test-Get_a_Dashboard_Report_returns_OK_response-1661283669
+      with Profile Metrics Query","url":"/dashboard/8mf-upv-5nr/test-getadashboardreportreturnsokresponse-1661283669-with-profile-metrics-query","created_at":"2022-08-23T19:41:10.069885+00:00","modified_at":"2022-08-23T19:41:10.069885+00:00","author_handle":"frog@datadoghq.com","widgets":[{"definition":{"requests":[{"profile_metrics_query":{"search":{"query":"runtime:jvm"},"group_by":[{"facet":"service","sort":{"facet":"@prof_core_cpu_cores","aggregation":"sum","order":"desc"},"limit":10}],"compute":{"facet":"@prof_core_cpu_cores","aggregation":"sum"}}}],"type":"timeseries"},"id":4986216752993841}],"layout_type":"ordered"}
+
+      '
+    code: 200
+    duration: ''
+    headers:
+      Content-Type:
+      - application/json
+    status: 200 OK
+- request:
+    body: |
+      {"data":{"attributes":{"description":"This report summarizes the recent errors, latency, and uptime of our Web Application Backend.","destinations":{"email":{"recipient_addresses":["jane.doe@example.com"]}},"schedule":{"active":true,"frequency":"1d","repeat_at":"13:30","repeat_on_day_of_month":null,"repeat_on_day_of_week":null,"timezone":"America/New_York"},"timeframe":"1w","title":"Summary of recent stability and performance for Web Application Backend"},"type":"dashboard_reports"}}
+    form: {}
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+    method: POST
+    url: https://api.datadoghq.com/api/v2/dashboards/8mf-upv-5nr/reports
+  response:
+    body: '{"data":{"relationships":{"dashboard":{"data":{"type":"dashboards","id":"8mf-upv-5nr"}}},"attributes":{"description":"This
+      report summarizes the recent errors, latency, and uptime of our Web Application
+      Backend.","schedule":{"repeat_on_day_of_week":null,"repeat_at":"13:30","frequency":"1d","timezone":"America/New_York","active":true,"repeat_on_day_of_month":null},"created_at":"2022-08-23T19:41:10.535012+00:00","title":"Summary
+      of recent stability and performance for Web Application Backend","modified_at":null,"template_variables":null,"timeframe":"1w","destinations":{"email":{"recipient_addresses":["jane.doe@example.com"]}}},"type":"dashboard_reports","id":"8a0a0dd6-231b-11ed-b38f-da7ad0900002","links":{"self":"/api/v2/dashboards/8mf-upv-5nr/reports/8a0a0dd6-231b-11ed-b38f-da7ad0900002"}},"links":{"self":"/api/v2/dashboards/8mf-upv-5nr/reports/8a0a0dd6-231b-11ed-b38f-da7ad0900002"}}
+
+      '
+    code: 201
+    duration: ''
+    headers:
+      Content-Type:
+      - application/json
+    status: 201 Created
+- request:
+    body: ''
+    form: {}
+    headers:
+      Accept:
+      - application/json
+    method: GET
+    url: https://api.datadoghq.com/api/v2/dashboards/8mf-upv-5nr/reports/8a0a0dd6-231b-11ed-b38f-da7ad0900002
+  response:
+    body: '{"data":{"relationships":{"dashboard":{"data":{"type":"dashboards","id":"8mf-upv-5nr"}}},"attributes":{"description":"This
+      report summarizes the recent errors, latency, and uptime of our Web Application
+      Backend.","schedule":{"repeat_on_day_of_week":null,"repeat_at":"13:30","frequency":"1d","timezone":"America/New_York","active":true,"repeat_on_day_of_month":null},"created_at":"2022-08-23T19:41:10.535012+00:00","title":"Summary
+      of recent stability and performance for Web Application Backend","modified_at":null,"template_variables":null,"timeframe":"1w","destinations":{"email":{"recipient_addresses":["jane.doe@example.com"]}}},"type":"dashboard_reports","id":"8a0a0dd6-231b-11ed-b38f-da7ad0900002","links":{"self":"/api/v2/dashboards/8mf-upv-5nr/reports/8a0a0dd6-231b-11ed-b38f-da7ad0900002"}},"links":{"self":"/api/v2/dashboards/8mf-upv-5nr/reports/8a0a0dd6-231b-11ed-b38f-da7ad0900002"}}
+
+      '
+    code: 200
+    duration: ''
+    headers:
+      Content-Type:
+      - application/json
+    status: 200 OK
+- request:
+    body: ''
+    form: {}
+    headers:
+      Accept:
+      - '*/*'
+    method: DELETE
+    url: https://api.datadoghq.com/api/v2/dashboards/8mf-upv-5nr/reports/8a0a0dd6-231b-11ed-b38f-da7ad0900002
+  response:
+    body: ''
+    code: 204
+    duration: ''
+    headers: {}
+    status: 204 No Content
+- request:
+    body: ''
+    form: {}
+    headers:
+      Accept:
+      - application/json
+    method: DELETE
+    url: https://api.datadoghq.com/api/v1/dashboard/8mf-upv-5nr
+  response:
+    body: '{"deleted_dashboard_id":"8mf-upv-5nr"}
+
+      '
+    code: 200
+    duration: ''
+    headers:
+      Content-Type:
+      - application/json
+    status: 200 OK
+version: 1
