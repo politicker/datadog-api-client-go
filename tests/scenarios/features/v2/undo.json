@@ -256,6 +256,66 @@
       "type": "idempotent"
     }
   },
+  "ConfluentCloudPublic1": {
+    "tag": "Confluent Cloud Accounts API",
+    "undo": {
+      "type": "safe"
+    }
+  },
+  "ConfluentCloudPublic3": {
+    "tag": "Confluent Cloud Accounts API",
+    "undo": {
+      "type": "safe"
+    }
+  },
+  "ConfluentCloudPublic5": {
+    "tag": "Confluent Cloud Accounts API",
+    "undo": {
+      "type": "safe"
+    }
+  },
+  "ConfluentCloudPublic2": {
+    "tag": "Confluent Cloud Accounts API",
+    "undo": {
+      "type": "safe"
+    }
+  },
+  "ConfluentCloudPublic4": {
+    "tag": "Confluent Cloud Accounts API",
+    "undo": {
+      "type": "safe"
+    }
+  },
+  "ConfluentCloudPublic6": {
+    "tag": "Confluent Cloud Accounts API",
+    "undo": {
+      "type": "safe"
+    }
+  },
+  "ConfluentCloudPublic8": {
+    "tag": "Confluent Cloud Accounts API",
+    "undo": {
+      "type": "safe"
+    }
+  },
+  "ConfluentCloudPublic10": {
+    "tag": "Confluent Cloud Accounts API",
+    "undo": {
+      "type": "safe"
+    }
+  },
+  "ConfluentCloudPublic7": {
+    "tag": "Confluent Cloud Accounts API",
+    "undo": {
+      "type": "safe"
+    }
+  },
+  "ConfluentCloudPublic9": {
+    "tag": "Confluent Cloud Accounts API",
+    "undo": {
+      "type": "safe"
+    }
+  },
   "SubmitLog": {
     "tag": "Logs",
     "undo": {
